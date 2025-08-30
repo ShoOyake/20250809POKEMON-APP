@@ -1,13 +1,36 @@
-# 依存物は追跡しない
-node_modules/
+# --- 共通 ---
+.DS_Store
+Thumbs.db
+*.log
+*.env
+.env.*
+
+# --- Python backend ---
+backend/.venv/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+backend/.coverage
+backend/htmlcov/
+backend/.ipynb_checkpoints/
+
+# --- Node frontend ---
 frontend/node_modules/
-backend/node_modules/
-
-# ビルド成果物は追跡しない
-dist/
+frontend/.vite/
+frontend/.next/
 frontend/dist/
-backend/dist/
+frontend/build/
+frontend/.eslintcache
 
-# ローカル環境ファイル
-.env
-.env.*.local
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS / Misc ---
+*.bak
+*.tmp
